@@ -1,6 +1,7 @@
-package com.clients.clients;
+package com.clients.clients.entity;
+   
 
-import org.springframework.boot.SpringApplication;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import jakarta.persistence.Column;
@@ -13,11 +14,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @SpringBootApplication
+
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClientsApplication {
+public class Clients {
+
+
     @Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,8 +34,6 @@ public class ClientsApplication {
 	private String statut;
     private String adresse ;
 
-    public static void main(String[] args) {
-        SpringApplication.run(ClientsApplication.class, args);
-    }
+
 
 }
